@@ -1,0 +1,33 @@
+{
+  "name": "potr-pots-landing",
+  "version": "1.0.0",
+  "description": "Landing page for Potr Pots company with adaptive design and SCSS",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html",
+    "lint": "eslint src/js/**/*.js && stylelint src/style/**/*.scss",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [
+    "html5",
+    "scss",
+    "javascript",
+    "landing-page",
+    "bem",
+    "pixel-perfect"
+  ],
+  "author": "Alex Kim",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "gh-pages": "^6.0.0",
+    "parcel": "^2.12.0",
+    "stylelint": "^15.10.0",
+    "stylelint-config-standard-scss": "^11.0.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ]
+}
