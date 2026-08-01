@@ -2,7 +2,7 @@
 
 A modern, responsive landing page for the **POTR POTS** brand, focused on eco-friendly self-watering origami plant pots. The project presents product value, brand story, materials, team, and contact options in a mobile-first layout with interactive UI blocks.
 
-**Live demo:** [alexkim71.github.io/potr-pots](https://alexkim71.github.io/potr-pots/)
+**Live demo:** [potr-pots-seven.vercel.app](potr-pots-seven.vercel.app)
 
 ---
 
