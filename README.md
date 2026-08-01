@@ -1,33 +1,145 @@
-# POTR POTS landing page
+# POTR POTS — Responsive Product Landing Page
 
-Landing page for [Potr Pots](https://potrpots.com/) company. Presents the company itself, its goals and mission, team, products and services. Describes the benefits of the company's products and services. Contains a form for sending a request for a consultation.
+A modern, responsive landing page for the **POTR POTS** brand, focused on eco-friendly self-watering origami plant pots. The project presents product value, brand story, materials, team, and contact options in a mobile-first layout with interactive UI blocks.
 
-# [DEMO](https://anastasiia-tilikina.github.io/potr-pots/)
+**Live demo:** [alexkim71.github.io/potr-pots](https://alexkim71.github.io/potr-pots/)
 
-# Technologies used
-- HTML
-- CSS
-- Sass (SCSS)
-- BEM
-- JavaScript
+---
 
-# Features overview
+## Table of Contents
 
-A Pixel Perfect Layout is adaptive and responsive as well as cross-browser compatible. It works correctly on all screen sizes (mobile, tablet and desktop versions). Is is implemented using the mobile-first approach.
+- [About](#about)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Install & Run](#install--run)
+  - [Build](#build)
+  - [Deploy](#deploy)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [Accessibility & SEO](#accessibility--seo)
+- [License](#license)
 
-The code is valid HTML5 and CSS3. In order to decrease user load and avoid code duplication, styles are implemented using Sass (SCSS) including advanced features like mixins, extends, functions, conditional operators etc. 
-BEM methodology is used for naming classes. This naming convention makes the code more readable and understandable, helps to avoid naming conflicts and makes the code easier to maintain and reuse.
+---
 
-User interaction is implemented using hover effects, transition and JavaScript. The page is interactive and has a smooth animation.
+## About
 
-Semantic and meta tags are used. SEO optimization is done. Accessibility is improved. The page is optimized for loading speed.
+This repository contains a single-page marketing website built with **HTML5, SCSS, and vanilla JavaScript**.  
+It is bundled with **Parcel 2** and designed to be adaptive across mobile, tablet, and desktop breakpoints.
 
-*see google lighthouse report below*
+## Features
 
-![Report](./src/images/README-lighthouse-report.png)
+- Mobile-first responsive layout
+- Semantic section-based page structure (header, feature blocks, contact area, footer)
+- BEM-based SCSS architecture with reusable:
+  - variables
+  - mixins
+  - functions
+  - extends
+- Interactive mobile menu (URL hash-driven open/close state)
+- Materials section interactivity:
+  - show more / show less content toggle
+  - expandable advantage descriptions
+  - slider-like horizontal switching via controls and pagination dots
+- Contact form UI with submit handling and form reset
+- Optimized static assets build through Parcel image optimization
+- GitHub Pages-ready deployment workflow (`gh-pages`)
 
-# Reflections
+![Lighthouse report](./src/images/README-lighthouse-report.png)
 
-After practicing with easier Landing page layout I decided to try to implement a more complex one combining all the knowledge in HTML/CSS I have gained so far along with some JavaScript and DOM manipulations in order to make the page more interactive.
+## Technologies
 
-The main challenge of this project was to implement more difficult Design then I did before and to make it responsive. I had to use more advanced CSS features like flexbox, grid, media queries, pseudo-classes and pseudo-elements along with Sass (SCSS) features like mixins, extends, functions, conditional operators etc.
+- HTML5
+- SCSS (Sass)
+- JavaScript (ES6+)
+- Parcel 2
+- ESLint
+- Stylelint (+ BEM selector pattern plugin)
+- Markuplint
+- Prettier
+- Husky
+- lint-staged
+- gh-pages
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (recommended: 16+)
+- npm
+
+### Install & Run
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Start development server:
+
+   ```bash
+   npm start
+   ```
+
+Parcel serves `src/index.html` and rebuilds on file changes.
+
+### Build
+
+Create a production bundle:
+
+```bash
+npm run build
+```
+
+Output is generated in `dist/`.
+
+### Deploy
+
+Publish the built app to GitHub Pages:
+
+```bash
+npm run deploy
+```
+
+## Project Structure
+
+```text
+.
+├─ src/
+│  ├─ index.html
+│  ├─ scripts/
+│  │  └─ main.js
+│  ├─ styles/
+│  │  ├─ main.scss
+│  │  ├─ reset.scss
+│  │  ├─ blocks/
+│  │  └─ utils/
+│  └─ images/
+│     ├─ icons/
+│     └─ photos/
+├─ .github/workflows/
+├─ .husky/
+├─ dist/
+├─ package.json
+└─ README.md
+```
+
+## Available Scripts
+
+- `npm start` — run Parcel dev server
+- `npm run build` — create production build
+- `npm run lint` — run ESLint + Stylelint checks
+- `npm run deploy` — deploy `dist/` to GitHub Pages
+
+> Note: the current `lint` script in `package.json` points to `src/js` and `src/style`; if you keep the present folder names (`src/scripts`, `src/styles`), update the paths in that script.
+
+## Accessibility & SEO
+
+The page uses semantic HTML, `meta` description/keywords, and `aria-label`s for interactive controls and social links.  
+It also includes descriptive image `alt` attributes and responsive-friendly markup.
+
+## License
+
+Licensed under the **ISC License**. See [LICENSE](./LICENSE).

@@ -1,10 +1,9 @@
 module.exports = {
-  extends: [
-    "stylelint-config-recommended-scss",
-    "@mate-academy/stylelint-config"
-  ],
-  plugins: [
-    "stylelint-scss"
-  ],
-  rules: {}
+  extends: ['stylelint-config-standard-scss'],
+  plugins: ['stylelint-selector-bem-pattern'],
+  rules: {
+    'plugin/selector-bem-pattern': {
+      preset: 'bem',
+    },
+  },
 };

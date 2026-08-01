@@ -2,12 +2,12 @@
   "name": "potr-pots-landing",
   "version": "1.0.0",
   "description": "Landing page for Potr Pots company with adaptive design and SCSS",
-  "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html",
     "lint": "eslint src/js/**/*.js && stylelint src/style/**/*.scss",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "prepare": "husky"
   },
   "keywords": [
     "html5",
@@ -20,14 +20,37 @@
   "author": "Alex Kim",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.0.0",
-    "gh-pages": "^6.0.0",
-    "parcel": "^2.12.0",
-    "stylelint": "^15.10.0",
-    "stylelint-config-standard-scss": "^11.0.0"
+    "@commitlint/cli": "^21.2.1",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@parcel/optimizer-image": "^2.16.4",
+    "@parcel/transformer-sass": "^2.16.4",
+    "eslint": "^8.57.1",
+    "gh-pages": "^6.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.3.0",
+    "markuplint": "^4.18.3",
+    "parcel": "^2.16.4",
+    "prettier": "^3.9.6",
+    "sass": "^1.102.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard-scss": "^11.1.0"
   },
   "browserslist": [
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "lint-staged": {
+    "*.html": [
+      "markuplint",
+      "prettier --write"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
 }
