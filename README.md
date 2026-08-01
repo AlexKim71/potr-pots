@@ -25,7 +25,7 @@ A modern, responsive landing page for the **POTR POTS** brand, focused on eco-fr
 
 ## About
 
-This repository contains a single-page marketing website built with **HTML5, SCSS, and vanilla JavaScript**.  
+This repository contains a single-page marketing website built with **HTML5, SCSS, and vanilla JavaScript**.
 It is bundled with **Parcel 2** and designed to be adaptive across mobile, tablet, and desktop breakpoints.
 
 ## Features
@@ -46,7 +46,7 @@ It is bundled with **Parcel 2** and designed to be adaptive across mobile, table
 - Optimized static assets build through Parcel image optimization
 - GitHub Pages-ready deployment workflow (`gh-pages`)
 
-![Lighthouse report](./src/images/README-lighthouse-report.png)
+![Lighthouse report](./src/images/LightHouse_Stats.png)
 
 ## Technologies
 
@@ -137,7 +137,7 @@ npm run deploy
 
 ## Accessibility & SEO
 
-The page uses semantic HTML, `meta` description/keywords, and `aria-label`s for interactive controls and social links.  
+The page uses semantic HTML, `meta` description/keywords, and `aria-label`s for interactive controls and social links.
 It also includes descriptive image `alt` attributes and responsive-friendly markup.
 
 ## License
